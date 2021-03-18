@@ -1,0 +1,4 @@
+include ':obfuscator'
+include ':samples:library'
+include ':samples:app'
+rootProject.name = "AndStrObfuscator"

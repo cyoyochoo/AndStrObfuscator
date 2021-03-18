@@ -1,0 +1,32 @@
+apply plugin: 'java-gradle-plugin'
+
+gradlePlugin {
+    plugins {
+        zhuyouyong {
+            id = 'zhuyouyong.obfuscator'
+            implementationClass = 'zhuyouyong.ObfuscatePlugin'
+        }
+    }
+}
+
+repositories {
+    google()
+    maven { url "https://maven.aliyun.com/repository/public" }
+}
+
+dependencies {
+    implementation "com.android.tools.build:gradle:4.1.2"
+    implementation('com.quinn.hunter:hunter-transform:1.1.0') {
+        exclude group: 'com.android.tools.build'
+    }
+}
+
+buildscript {
+    repositories {
+        maven { url "https://maven.aliyun.com/repository/public" }
+    }
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
+apply plugin: 'com.github.dcendents.android-maven'
