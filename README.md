@@ -39,9 +39,3 @@ obfuscate {
     ]
 }
 ```
-
-## Result
-
-Before:
-![image](https://gitee.com/yoyochoo/str-obfuscate-plugin/blob/master/images/before.png)
-After:
