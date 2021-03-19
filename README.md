@@ -1,7 +1,7 @@
 # AndStrObfuscator
 A simple Android string obfuscator.
 
-#### Instructions
+## Instructions
 
 1.  Import plugin
 ```gradle
@@ -39,3 +39,9 @@ obfuscate {
     ]
 }
 ```
+
+## Result
+
+Before:
+![image](https://gitee.com/yoyochoo/str-obfuscate-plugin/blob/master/images/before.png)
+After:
