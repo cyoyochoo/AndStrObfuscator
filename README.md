@@ -1,8 +1,8 @@
 # AndStrObfuscator
 A simple Android string obfuscator.
 
-## Instructions
-1.  Import plugin
+# Instructions
+> 1.  Import plugin
 ```gradle
 buildscript {
     repositories {
@@ -13,7 +13,7 @@ buildscript {
     }
 }
 ```
-2.  Add plugin dependency in your app
+> 2.  Add plugin dependency in your app
 ```gradle
 repositories {
     maven { url 'https://jitpack.io' }
@@ -23,7 +23,7 @@ dependencies {
     implementation 'com.gitee.yoyochoo:obfuscator:1.0'
 }
 ```
-3.  Config plugin
+> 3.  Config plugin
 ```gradle
 apply plugin: 'zhuyouyong.obfuscator'
 
@@ -39,7 +39,7 @@ obfuscate {
 }
 ```
 
-## Result
+# Result
 > **Before**
 ```kotlin
 class HomeAct : AppCompatActivity(R.layout.activity_main) {
