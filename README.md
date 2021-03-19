@@ -2,7 +2,6 @@
 A simple Android string obfuscator.
 
 ## Instructions
-
 1.  Import plugin
 ```gradle
 buildscript {
@@ -37,5 +36,31 @@ obfuscate {
             'com.yy',
             ...
     ]
+}
+```
+
+## Result
+> **Before**
+```kotlin
+class HomeAct : AppCompatActivity(R.layout.activity_main) {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        findViewById<TextView>(R.id.txt).text = "Hello"
+    }
+}
+```
+> **After**
+```java
+public final class HomeAct extends AppCompatActivity {
+    public HomeAct() {
+        super(C0658R.layout.activity_main);
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        View findViewById = findViewById(C0658R.C0661id.txt);
+        ((TextView) findViewById).setText(OooOO0OO.OooOOoo0oo(new byte[]{124, 85, 92, 90, 94}, "400611"));
+    }
 }
 ```
