@@ -9,11 +9,22 @@ buildscript {
         maven { url 'https://jitpack.io' }
     }
     dependencies {
-        classpath 'com.gitee.yoyochoo:str-obfuscate-plugin:2.0'
+        classpath 'com.gitee.yoyochoo:str-obfuscate-plugin:3.0'
     }
 }
 ```
-> 2.  Config plugin in your app
+> 2.  Add dependency
+```gradle
+allprojects {
+    repositories {
+        maven { url = 'https://jitpack.io' }
+    }
+}
+dependencies {
+    implementation 'com.gitee.yoyochoo:obfuscator:3.0'
+}
+```
+> 3.  Config plugin in your app
 ```gradle
 apply plugin: 'zhuyouyong.obfuscator'
 
